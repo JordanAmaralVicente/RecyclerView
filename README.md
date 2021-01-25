@@ -19,3 +19,22 @@ Abaixo, há uma imagem de como deve ficar a tag:
 !["Imagem da Main_Activity](https://github.com/JordanAmaralVicente/RecyclerView/blob/main/Imagens_Recycler/activity_main.JPG "XML activity_main")
 
 Além das tags normais, como: ``` android:id ``` ou ``` android:width & android:height ``` , devemos colocar uma tag muito importante, indicada por ``` tools:listitem = "@layout:item_view" ```. Pode ser que a IDE aponte algum erro, pois não implementamos esse código ainda, porém deixe ele aí que voltaremos. Lembrando que não precisa ser necessariamente esse nome, usamos esse pois fizemos um projeto só para isso, mas quando o projeto for maior, é aconselhável que você coloque o nome de acordo com o que será exibido. 
+
+## Alguns outros passos
+
+2. Após definido o layout da tela aonde você usará o RecyclerView, é necessário que desenvolva o código que está ligado àquele layout. Como segue a imagem abaixo:
+
+!["Imagem da Classe Main"](https://github.com/JordanAmaralVicente/RecyclerView/blob/main/Imagens_Recycler/Main_Activity.JPG "Classe Main Activity")
+
+Acima é a implementação da Classe que controla a activity em que estamos usando a RecyclerView. Vamos separar ela em algumas partes para ficar de mais fácil compreensão.
+
+A primeira parte dessa implementação é a declaração dos atributos dessas classe, sendo eles:
+```Java
+  RecyclerView mRecyclerView;
+  private FrutaAdapter mAdapter;
+```
+Usaremos o atributo ``` mRecyclerView ``` para controlar o layout que declaramos no código anterior 
+Já o atributo ``` mAdapter ``` da Classe ``` FrutaAdapter``` é o objeto de uma classe que vamos implementar logo em seguida, mas já vamos deixá-la declarada aqui para não termos que voltar nessa parte.
+
+
+ 

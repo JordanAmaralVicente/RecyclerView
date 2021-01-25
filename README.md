@@ -103,7 +103,20 @@ public FrutaAdapter(String[] frutasSet) {
 ```
 Aqui, criamos um atributo do objeto que será criado com o mesmo tipo que estamos recebendo por parâmetro. Se você estiver usando um array de objetos, no construtor da Classe você precisar modificar a classe String para o objeto que você deseja. E dentro do construtor, atribuímos ao atributo frutasSet o array de frutas que recebemos por parâmetro no construtor.
 
+Logo Após a isso, declaramos uma subclasse
+```Java
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        private final TextView textView; //o exemplo é composto apenas por um texto
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
 
-
+            textView = (TextView) itemView.findViewById(R.id.fruta_item);
+        }
+        public TextView getTextView() {
+            return textView;
+        }
+    }
+```
+Essa subclasse vai aplicar o item_view em cada um dos elementos que temos no array. Nela, declaramos o campos que cada elemento terá, aqui temos somente texto então declaramos o atributo ` private final TextView textView` e criamos um getter para ele, chamado `getTextView` que retorna um TextView 
 
 

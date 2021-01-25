@@ -117,6 +117,42 @@ Logo Após a isso, declaramos uma subclasse
         }
     }
 ```
-Essa subclasse vai aplicar o item_view em cada um dos elementos que temos no array. Nela, declaramos o campos que cada elemento terá, aqui temos somente texto então declaramos o atributo ` private final TextView textView` e criamos um getter para ele, chamado `getTextView` que retorna um TextView 
+Essa subclasse vai aplicar o item_view em cada um dos elementos que temos no array. Nela, declaramos o campos que cada elemento terá, aqui temos somente texto então declaramos o atributo ` private final TextView textView` e criamos um getter para ele, chamado `getTextView` que retorna um TextView.
+Se tivéssemos mais elementos, criamos um atributo e um getter para cada um deles tanto quanto for necessário. 
+
+Dentro do construtor dessa subclasse, recebemos uma View como parâmetro, sendo o item_view que criamos e enviamos ela para a classe pai que irá gerenciar isso. Logo após, linkamos o objeto textView com a TextView do Layout através de seu ID `fruta item`.
+
+Uma vez definida a subclasse, voltamos à classe pai e declaramos as seguintes funções herdadas da classe RecyclerView:
+
+```Java
+@NonNull
+    @Override
+    public FrutaAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_view, parent, false);
+        return new ViewHolder(view);
+    }
+```
+Nesse método retornamos para a Classe RecyclerView o valor gerado pela FrutaAdapter.ViewHolder.
+Para isso, declaramos primeiro uma nova View. Nessa parte, não há muito o que se mudar, exceto o layout do item_view que será usado, indicado por: `R.layout.item_view`.
+Após isso, retornamos um objeto do tipo ViewHolder passando por parâmetro a View que criamos na linha de cima. 
+
+Após isso, temos 
+```Java
+@Override
+    public void onBindViewHolder(@NonNull FrutaAdapter.ViewHolder holder, int position) {
+        holder.getTextView().setText(frutasSet[position]);
+    }
+```
+Nesse método herdado, Recebemos um objeto do tipo ``FrutaAdapter.ViewHolder`` que é a classe que criamos e um Index para saber a posição atual do array. indicado por `int position`. E, assim, através do objeto `holder` , pegamos a textView declarada, mudamos o texto presente nela através do função `setText()` passando por parâmetro o Array de frutas e o conteúdo da posição que desejamos atribuir à textView. Ficando do seguinte modo ` holder.getTextView().setText(frutasSet[position]);`
+
+
+Por fim, temos: 
+```Java
+@Override
+    public int getItemCount() {
+        return frutasSet.length;
+    }
+```
+Que servirá de contador para a classe Pai da classe atual, de forma que será o tamanho total do array que estamos trabalhando. Nesse método apenas pegamos o tamanho do array através do atributo `length` presente no array. 
 
 

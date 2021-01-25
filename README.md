@@ -85,3 +85,25 @@ Agora, estamos nos estágio final de fazer nossa recyclerView funcionar. Já def
 
 ![Adapter 1](https://github.com/JordanAmaralVicente/RecyclerView/blob/main/Imagens_Recycler/Adapter_1.JPG "Imagem Adapter 1")
 ![Adapter 2](https://github.com/JordanAmaralVicente/RecyclerView/blob/main/Imagens_Recycler/Adapter_2.JPG "Imagem Adapter 2")
+
+o primeiro passo dessa parte é a declaração da classe FrutaAdapter
+```Java
+public class FrutaAdapter extends RecyclerView.Adapter<FrutaAdapter.ViewHolder>
+```
+Além do nome, temos que herdar ou extender a classe ```RecyclerView.Adapter<FrutaAdapter.ViewHolder> ``` . Extendemos essa classe como se ela fosse uma Array de FrutaAdapter.ViewHolder.
+
+Sendo que ViewHolder é uma subclasse da classe que estamos criando no momento, então é possível que a IDE, novamente, aponte um erro, mas ao final do código estará tudo funcionando. 
+
+abaixo da declaração temos os seguintes elementos:
+```Java
+private String[] frutasSet; //array que irá preencher a lista
+public FrutaAdapter(String[] frutasSet) {
+    this.frutasSet = frutasSet;
+}
+```
+Aqui, criamos um atributo do objeto que será criado com o mesmo tipo que estamos recebendo por parâmetro. Se você estiver usando um array de objetos, no construtor da Classe você precisar modificar a classe String para o objeto que você deseja. E dentro do construtor, atribuímos ao atributo frutasSet o array de frutas que recebemos por parâmetro no construtor.
+
+
+
+
+

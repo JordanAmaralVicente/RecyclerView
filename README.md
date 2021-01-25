@@ -76,3 +76,8 @@ Aqui é a parte aonde você definirá como será o design de cada item que ficar
 
 * PS: Aqui é feito o design de uma única célula da RecyclerView, por exemplo: só o design da celula que vai aparecer a String: "Maça" !
 
+Na TextView que usaremos, colocamos o ID : ```android:id="@+id/fruta_item"``` para poder identificar um item. É importantíssimo declarar um ID, pois iremos precisar na última parte do código. 
+***
+
+## A Parte Difícil :( 
+

@@ -155,4 +155,16 @@ Por fim, temos:
 ```
 Que servirá de contador para a classe Pai da classe atual, de forma que será o tamanho total do array que estamos trabalhando. Nesse método apenas pegamos o tamanho do array através do atributo `length` presente no array. 
 
+***
 
+# Resultado Final
+
+Com isso, temos o seguinte resultado do nosso tutorial:
+
+![Resultado Final](https://github.com/JordanAmaralVicente/RecyclerView/blob/main/Imagens_Recycler/Resultado_Final.png "Imagem")
+
+
+
+***
+
+Participantes: [Guilherme Augusto](https://github.com/Guilhermeaug) & [Jordan Ítalo](https://github.com/JordanAmaralVicente)

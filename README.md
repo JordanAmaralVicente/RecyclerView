@@ -14,4 +14,4 @@ Uma vez configurado o projeto, não é necessário nenhuma instalação de bibli
 
 1. O primeiro passo para o uso de uma RecyclerView é a adição da tag ```<androidx.recyclerview.widget.RecyclerView />``` na Activity em que você deseja usar essa funcionalidade.
 Abaixo, há uma imagem de como deve ficar a tag:
-!["Imagem da Main_Activity](https://drive.google.com/file/d/1byyaMDvben4uSkVvhxeX4sXeRJ5KKxLO/view?usp=sharing "Actitivy_Main")
+!["Imagem da Main_Activity](https://github.com/JordanAmaralVicente/RecyclerView/blob/main/Imagens_Recycler/activity_main.JPG "Actitivy_Main")

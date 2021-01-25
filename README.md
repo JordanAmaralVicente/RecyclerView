@@ -79,5 +79,9 @@ Aqui é a parte aonde você definirá como será o design de cada item que ficar
 Na TextView que usaremos, colocamos o ID : ```android:id="@+id/fruta_item"``` para poder identificar um item. É importantíssimo declarar um ID, pois iremos precisar na última parte do código. 
 ***
 
-## A Parte Difícil :( 
+## Últimos Passos ( A Parte Difícil :c ) 
 
+Agora, estamos nos estágio final de fazer nossa recyclerView funcionar. Já definimos Todos os layouts e a classe principal da nossa aplicação. Agora Vamos definir a Classe ```FrutaAdapter.java``` :
+
+![Adapter 1](https://github.com/JordanAmaralVicente/RecyclerView/blob/main/Imagens_Recycler/Adapter_1.JPG "Imagem Adapter 1")
+![Adapter 2](https://github.com/JordanAmaralVicente/RecyclerView/blob/main/Imagens_Recycler/Adapter_2.JPG "Imagem Adapter 2")

@@ -48,3 +48,13 @@ Logo após, temos a seguinte declaração de lista:
   String[] frutas = {"Maça", "Melão", "Banana", "Acerola", "Uva", "Melancia", "Abacate", "Abacaxi", "Açai"};
 ```
 Aqui temos um Array de Strings, mas poderia ser qualquer outra coisa ou até mesmo um array de Objetos de Uma classe que você pegou do banco de dados. Por exemplo, uma classe chamada usuário que contém: Nome, email e senha. E puxando esses dados do banco de dados, você colocou todos eles em um Array. Mas para fins didáticos, colocamos um array de string para ficar mais fácil a compreensão.
+
+Uma vez feito isso, podemos partir direto para a manipulação da RecyclerView e com isso, temos o seguinte trecho de código:  
+
+```Java
+        mRecyclerView = findViewById(R.id.recycler_view_layour_recycler); //referência do arquivo xml
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this)); //gerenciador de layout
+        mAdapter = new FrutaAdapter(frutas); //criando o Adapter
+        mRecyclerView.setAdapter(mAdapter); //atribuindo o adapter para o recyclerView
+```
+

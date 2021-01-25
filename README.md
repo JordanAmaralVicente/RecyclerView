@@ -52,9 +52,13 @@ Aqui temos um Array de Strings, mas poderia ser qualquer outra coisa ou até mes
 Uma vez feito isso, podemos partir direto para a manipulação da RecyclerView e com isso, temos o seguinte trecho de código:  
 
 ```Java
-        mRecyclerView = findViewById(R.id.recycler_view_layour_recycler); //referência do arquivo xml
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this)); //gerenciador de layout
-        mAdapter = new FrutaAdapter(frutas); //criando o Adapter
-        mRecyclerView.setAdapter(mAdapter); //atribuindo o adapter para o recyclerView
+mRecyclerView = findViewById(R.id.recycler_view_layour_recycler); //referência do arquivo xml
+mRecyclerView.setLayoutManager(new LinearLayoutManager(this)); //gerenciador de layout
+mAdapter = new FrutaAdapter(frutas); //criando o Adapter
+mRecyclerView.setAdapter(mAdapter); //atribuindo o adapter para o recyclerView
 ```
+
+a primeira linha desse trecho de código relaciona o objeto da classe RecyclerView com o layout que definimos no arquivo de layout XML. É importante atentar-se que você deve passar por parâmetro o mesmo ID que você definiu no arquivo XML. Aqui, passamos por parâmetro o id: ``` recycler_view_layour_recycler ``` .
+
+Logo após, definimos o layout manager, que será responsável pelo gerenciamento da recycler view. Fazemos isso, através do método ``` setLayoutManager ``` que é acessado através do próprio objeto que criamos anteriormente. A RecyclerView tem um layout manager de default, mas é aconselhável explicitar no código qual você deseja usar para evitar problemas futuros quando quiser alterar suas View. Aqui usamos o ```LinearLayoutManager``` passando por parâmetro o objeto ```this``` que está ligado ao ```mRecyclerView```.
 

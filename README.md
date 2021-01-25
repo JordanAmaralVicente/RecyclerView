@@ -63,3 +63,16 @@ a primeira linha desse trecho de código relaciona o objeto da classe RecyclerVi
 Logo após, definimos o layout manager, que será responsável pelo gerenciamento da recycler view. Fazemos isso, através do método ``` setLayoutManager ``` que é acessado através do próprio objeto que criamos anteriormente. A RecyclerView tem um layout manager de default, mas é aconselhável explicitar no código qual você deseja usar para evitar problemas futuros quando quiser alterar suas View. Aqui usamos o ```LinearLayoutManager``` passando por parâmetro o objeto ```this``` que está ligado ao ```mRecyclerView```.
 
 Abaixo, instânciamos o objeto ``` mAdapter ``` passando por parâmetro nosso array ```frutas``` que definimos anteriormente. Vale lembrar de todas observações referentes ao array de string ou objetos. E uma vez instanciando o Adapter , podemos já definir o adapter da recyclerview com o seguinte código ``` mRecyclerView.setAdapter(mAdapter) ``` passando por parâmetro o Adapter que acabamos de instanciar. 
+
+## Back to the XML
+
+lembra de quando colocamos a tag ```tools:listitem = "@layout:item_view"``` ? 
+
+Agora iremos criar o arquivo XML desse código:
+
+![Item View](https://github.com/JordanAmaralVicente/RecyclerView/blob/main/Imagens_Recycler/item_view.JPG "Item_View XML CODE")
+
+Aqui é a parte aonde você definirá como será o design de cada item que ficará na tela. Você pode usar sua criatividade para fazer como quiser, mas é necessário lembrar que você deve ter um elemento, para cada atributo que você quiser mostrar. Por exemplo: Aqui, no tutorial, Só vamos mostrar uma sequência de textos. Então, vamos colocar apenas uma TextView, pois precisamos somente disso. Então, você adequa seu código de acordo com sua necessidade
+
+* PS: Aqui é feito o design de uma única célula da RecyclerView, por exemplo: só o design da celula que vai aparecer a String: "Maça" !
+

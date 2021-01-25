@@ -37,4 +37,14 @@ Usaremos o atributo ``` mRecyclerView ``` para controlar o layout que declaramos
 Já o atributo ``` mAdapter ``` da Classe ``` FrutaAdapter``` é o objeto de uma classe que vamos implementar logo em seguida, mas já vamos deixá-la declarada aqui para não termos que voltar nessa parte.
 
 
- 
+Avançando um pouco no código, temos o método padrão das activities aonde todas as coisas são controladas e será lá que faremos algumas declarações. Sendo esse método o 
+```Java
+protected void onCreate(Bundle savedInstanceState)
+``` 
+nele, por padrão, tem algumas coisas que não alteramos, sendo eles: as duas primeiras chamadas de funções declaradas na imagem do código.
+
+Logo após, temos a seguinte declaração de lista:
+```Java
+  String[] frutas = {"Maça", "Melão", "Banana", "Acerola", "Uva", "Melancia", "Abacate", "Abacaxi", "Açai"};
+```
+Aqui temos um Array de Strings, mas poderia ser qualquer outra coisa ou até mesmo um array de Objetos de Uma classe que você pegou do banco de dados. Por exemplo, uma classe chamada usuário que contém: Nome, email e senha. E puxando esses dados do banco de dados, você colocou todos eles em um Array. Mas para fins didáticos, colocamos um array de string para ficar mais fácil a compreensão.
